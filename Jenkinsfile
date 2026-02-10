@@ -6,7 +6,12 @@ pipeline {
             steps {
                 echo "Repository already checked out successfully"
                 dir('.') {
-                    bat 'dir'
+                    // for windows use bat
+                    // bat 'dir'
+
+                    // for linux use sh
+
+                    sh 'dir'
                 }
             }
         }
